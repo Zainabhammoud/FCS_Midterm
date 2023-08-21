@@ -9,7 +9,7 @@ correct_pass="admin123123"
 input_user=99
 input_pass=99
 
-employees={'employee_id', 'username', 'timestamp', 'gender', 'salary'}
+employees={"employee_id", "username", 'timestamp', 'gender', 'salary'}
 
 while count<5 and (correct_pass != input_pass or correct_user!= input_user):
   input_user=input("Enter your username ")
@@ -19,11 +19,12 @@ while count<5 and (correct_pass != input_pass or correct_user!= input_user):
     count+=1 # the user input incorrect credentials    
     print("Incorrect Username and/or Password!")
   else:
-    print(admin_menu)
+    admin_menu();
     
   if correct_user == input_user and correct_pass == input_pass:
     print("Admin menu")
     
+
 
 
 def display_statistics(employees):
@@ -38,6 +39,18 @@ def display_statistics(employees):
   print("Female: "+ str(female))
 
 def add_new_employee(employee_id, username, timestamp, gender, salary):
+  employee_id=
+  username =input("Enter the name of the employee: ")
+  timestamp =(input("Enter the date of joining: "))
+  gender =input("Enter his/her gender: ")
+  salary=float(input("Enter the salary: "))
+  if username in employees:
+    print("Username already exists")
+    return
+  if salary<0:
+    print("Invalid salary ")
+    return
+  employees[data]=[employee_id,username,timestamp,gender,salary]
   print()
 
 
